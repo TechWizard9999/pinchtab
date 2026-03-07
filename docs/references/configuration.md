@@ -19,6 +19,7 @@ Values are loaded in this order (highest priority first):
 Only a small operational env surface remains:
 - `PINCHTAB_CONFIG`
 - `PINCHTAB_BIND`
+- `PINCHTAB_MODE`
 - `PINCHTAB_PORT`
 - `PINCHTAB_TOKEN`
 - `CHROME_BIN`
@@ -259,6 +260,16 @@ Or in config file:
     "instancePortEnd": 8200
   }
 }
+```
+
+### Explicit Server Mode
+
+PinchTab defaults to dashboard mode. Use `PINCHTAB_MODE` only if you need to
+force startup mode explicitly:
+
+```bash
+PINCHTAB_MODE=bridge pinchtab
+PINCHTAB_MODE=dashboard pinchtab
 ```
 
 ### Tab Eviction Policy
